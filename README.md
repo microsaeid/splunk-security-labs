@@ -16,10 +16,10 @@ This repository documents my hands-on Splunk labs as I build practical SOC Analy
 
 ## Lab Environment
 
-Host: Ubuntu Server 24.04 LTS
-Platform: Hyper-V
-SIEM: Splunk Enterprise
-Data Sources: Windows Event Logs, Sysmon
+- Host: Ubuntu Server 24.04 LTS
+- Platform: Hyper-V
+- SIEM: Splunk Enterprise
+- Data Sources: Windows Event Logs, Sysmon
 
 ## Completed Labs
 
