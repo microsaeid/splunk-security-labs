@@ -1,4 +1,4 @@
-# Part 01 - Splunk Enterprise Installation on Ubuntu Server
+# Part 01 - Ubuntu Server Preparation for Splunk
 
 ## Overview
 
@@ -6,15 +6,22 @@
 
 | Item | Details |
 |------|---------|
-| Project | Splunk Enterprise Installation |
-| Platform | Hyper-V |
+| Project | Ubuntu Server Preparation for Splunk |
+| Platform | Microsoft Hyper-V |
+| Server | Splunk Server VM |
 | Operating System | Ubuntu Server 24.04.4 LTS |
-| SIEM | Splunk Enterprise 10.0.2 |
-| Goal | Deploy Splunk Enterprise on Ubuntu Server and verify a successful installation and web interface access. |
+| Network | External Virtual Switch |
+| Remote Access | OpenSSH |
+| File Transfer | Secure Copy Protocol (SCP) |
+| Goal | Build and prepare a dedicated Ubuntu Server for Splunk Enterprise |
 
 ### Short Introduction
 
-This lab documents the deployment of a dedicated Splunk Enterprise server on Ubuntu Server 24.04.4 LTS running in Hyper-V. The objective was to prepare a clean SIEM environment by installing Splunk Enterprise, configuring secure remote access with OpenSSH, transferring the installation package from Windows using SCP, completing the initial Splunk setup, and verifying successful access to the Splunk Web interface.
+This lab documents the creation and preparation of a dedicated Ubuntu Server virtual machine for a Splunk Enterprise deployment.
+
+The work included creating the virtual machine in Hyper-V, installing Ubuntu Server, configuring network connectivity, enabling secure remote access with SSH, troubleshooting TCP port 22 connectivity, and transferring the Splunk Enterprise installation package from the Windows host to the Linux server.
+
+Splunk Enterprise was not installed during this part. The objective was to prepare and verify the underlying server environment before beginning the Splunk installation.
 
 ---
 
@@ -27,67 +34,71 @@ This lab documents the deployment of a dedicated Splunk Enterprise server on Ubu
 ### Operating Systems
 
 - Ubuntu Server 24.04.4 LTS
-- Windows 11 (Host)
+- Windows 11 Host
+
+### Virtualization
+
+- Microsoft Hyper-V
+- Generation 2 virtual machine
+- My External Lab virtual switch
+
+### Server Resources
+
+| Resource | Configuration |
+|----------|---------------|
+| Memory | 8 GB |
+| Processors | 4 vCPU |
+| Virtual Disk | 100 GB dynamically expanding VHDX |
+| Network | External virtual switch |
+| Secure Boot | Microsoft UEFI Certificate Authority |
 
 ### Monitoring Tools
 
-- OpenSSH Server
-- Secure Copy Protocol (SCP)
+- None configured during this part
 
 ### SIEM
 
-- Splunk Enterprise 10.0.2
+- Not installed during this part
 
 ---
 
 ## Investigation Steps
 
-1. Created a dedicated Ubuntu Server virtual machine in Hyper-V.
-2. Installed Ubuntu Server 24.04.4 LTS.
-3. Updated the operating system packages.
-4. Verified network connectivity.
-5. Installed and verified the OpenSSH Server service.
-6. Confirmed SSH was listening on TCP port 22.
-7. Verified SSH connectivity from the Windows host.
-8. Transferred the Splunk Enterprise installation package using SCP.
-9. Installed Splunk Enterprise using the Debian package.
-10. Started Splunk Enterprise for the first time.
-11. Accepted the Splunk Enterprise license agreement.
-12. Created the initial administrator account.
-13. Verified successful access to the Splunk Web interface.
+### 1. Created the Virtual Machine
 
----
+Created a new Generation 2 virtual machine in Hyper-V with the following configuration:
 
-## Detection & Analysis
+- VM name: `Splunk-Server`
+- Memory: 8192 MB
+- Virtual processors: 4
+- Virtual disk: 100 GB
+- Network: My External Lab
+- Installation media: Ubuntu Server 24.04.4 LTS ISO
 
-No security detections were generated during this lab because the objective was infrastructure deployment rather than security monitoring.
+Configured Secure Boot to use:
 
----
+`Microsoft UEFI Certificate Authority`
 
-## MITRE ATT&CK Mapping
+### 2. Installed Ubuntu Server
 
-**N/A**
+Installed Ubuntu Server with the following selections:
 
-No MITRE ATT&CK techniques were simulated or observed during this installation lab.
+- Standard Ubuntu Server installation
+- Entire virtual disk used
+- LVM disabled
+- Disk encryption disabled
+- Ubuntu Pro skipped
+- Third-party drivers not selected
+- Featured server snaps not installed
+- OpenSSH Server selected
+- Password authentication over SSH enabled
 
----
+Configured the server identity:
 
-## Key Takeaways
+- Server name: `splunk-server`
+- Local user: `saeid`
 
-- Successfully deployed Splunk Enterprise on Ubuntu Server.
-- Configured secure remote administration using OpenSSH and SCP.
-- Verified that Splunk services initialized correctly.
-- Confirmed successful access to the Splunk Web interface.
-- Established the foundation for future Splunk detection and log analysis labs.
+### 3. Updated the Ubuntu Package List
 
----
-
-## Navigation
-
-**Previous Lab**
-
-N/A
-
-**Next Lab**
-
-Splunk Data Onboarding and First Search
+```bash
+sudo apt update
