@@ -63,7 +63,3 @@ splunk-security-labs/
 - Each README represents one completed scenario.
 - Only validated and tested work is documented.
 - The repository follows the **Reality First** documentation principle.
-
-## License
-
-This project is published for educational and portfolio purposes.
