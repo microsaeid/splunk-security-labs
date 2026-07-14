@@ -194,11 +194,4 @@ ssh saeid@192.168.1.121
 
 ## Navigation
 
-**Previous Lab**
-
-N/A
-
-**Next Lab**
-
-**Part 02 - Splunk Enterprise Installation**
 ➡️ Next Lab: [Part 02 - Splunk Enterprise Installation](../Part 02 - Splunk Enterprise Installation)
