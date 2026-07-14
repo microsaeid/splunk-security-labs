@@ -122,5 +122,6 @@ Successfully authenticated using the administrator account.
 
 ⬅️ Previous Lab: [Part 01 - Ubuntu Server Preparation for Splunk](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2001%20-%20Ubuntu%20Server%20Preparation%20for%20Splunk)
 
-➡️ Next Lab: 
+➡️ Next Lab: [Part 03-01 - Windows 10 Universal Forwarder Installation](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2003-01%20-%20Windows%2010%20Universal%20Forwarder%20Installation)
+ 
 
