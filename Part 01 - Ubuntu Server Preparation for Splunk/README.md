@@ -194,4 +194,4 @@ ssh saeid@192.168.1.121
 
 ## Navigation
 
-➡️ Next Lab: [Part 02 - Splunk Enterprise Installation](../Part 02 - Splunk Enterprise Installation)
+➡️ Next Lab: [Part 02 - Splunk Enterprise Installation](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2002%20-%20Splunk%20Enterprise%20Installation)
