@@ -12,13 +12,11 @@
 | Operating System | Ubuntu Server 24.04.4 LTS |
 | Network | External Virtual Switch |
 | Remote Access | OpenSSH |
-| Goal | Build and prepare a dedicated Ubuntu Server for Splunk Enterprise |
+| Goal | Prepare an Ubuntu Server for a Splunk Enterprise deployment |
 
 ### Short Introduction
 
-This lab documents the preparation of a dedicated Ubuntu Server for a future Splunk Enterprise deployment.
-
-The objective was to build a clean server environment by creating a new virtual machine, installing Ubuntu Server, configuring networking, enabling secure remote administration with OpenSSH, and verifying SSH connectivity before installing Splunk Enterprise.
+This lab documents the preparation of a dedicated Ubuntu Server virtual machine before installing Splunk Enterprise.
 
 ## Lab Environment
 
@@ -51,36 +49,32 @@ The objective was to build a clean server environment by creating a new virtual 
 
 ### 1. Created the Virtual Machine
 
-Created a new Generation 2 virtual machine with the following configuration:
-
 - VM Name: `Splunk-Server`
+- Generation: 2
 - Memory: 8192 MB
-- Virtual Processors: 4
+- Processors: 4
 - Virtual Disk: 100 GB
 - Network: My External Lab
 - Installation Media: Ubuntu Server 24.04.4 LTS ISO
-
-Configured Secure Boot to use:
-
-`Microsoft UEFI Certificate Authority`
+- Secure Boot: Microsoft UEFI Certificate Authority
 
 ### 2. Installed Ubuntu Server
 
-Selected the following installation options:
+Installation options:
 
-- Standard Ubuntu Server installation
-- Use Entire Disk
+- Standard Ubuntu Server
+- Entire Disk
 - LVM Disabled
 - Disk Encryption Disabled
-- Skip Ubuntu Pro
-- No Third-party Drivers
-- No Featured Server Snaps
-- Install OpenSSH Server
-- Enable Password Authentication over SSH
+- Ubuntu Pro Skipped
+- Third-party Drivers Disabled
+- Featured Server Snaps Disabled
+- OpenSSH Server Installed
+- Password Authentication Enabled
 
-Configured:
+Server configuration:
 
-- Server Name: `splunk-server`
+- Hostname: `splunk-server`
 - Username: `saeid`
 
 ### 3. Updated the Package Repository
@@ -89,27 +83,23 @@ Configured:
 sudo apt update
 ```
 
-### 4. Verified the Server IP Address
-
-Checked the local hostname address:
+### 4. Checked the Server IP Address
 
 ```bash
 hostname -i
 ```
 
-Output:
+Output
 
 ```text
 127.0.1.1
 ```
 
-Checked the assigned network interface addresses:
-
 ```bash
 hostname -I
 ```
 
-Output:
+Output
 
 ```text
 192.168.1.121
@@ -117,21 +107,15 @@ Output:
 
 ### 5. Tested Network Connectivity
 
-From Windows PowerShell:
-
 ```powershell
 ping 192.168.1.121
 ```
 
-Verified successful network communication.
-
-### 6. Verified the OpenSSH Package
+### 6. Checked the OpenSSH Package
 
 ```bash
 sudo apt install openssh-server -y
 ```
-
-Confirmed that OpenSSH Server was already installed.
 
 ### 7. Checked the SSH Service
 
@@ -139,13 +123,13 @@ Confirmed that OpenSSH Server was already installed.
 sudo systemctl status ssh
 ```
 
-Initial status:
+Output
 
 ```text
 inactive (dead)
 ```
 
-### 8. Enabled SSH at Startup
+### 8. Enabled the SSH Service
 
 ```bash
 sudo systemctl enable ssh
@@ -157,69 +141,56 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 ```
 
-### 10. Verified the SSH Service
+### 10. Checked the SSH Service
 
 ```bash
 sudo systemctl status ssh
 ```
 
-Output:
+Output
 
 ```text
 active (running)
 ```
 
-### 11. Verified That SSH Was Listening on TCP Port 22
+### 11. Checked TCP Port 22
 
 ```bash
 sudo ss -tlnp | grep :22
 ```
 
-Output:
+Output
 
 ```text
 0.0.0.0:22
 [::]:22
 ```
 
-Confirmed that SSH was listening on both IPv4 and IPv6 interfaces.
-
-### 12. Tested TCP Port 22 from Windows
-
-From Windows PowerShell:
+### 12. Tested TCP Port 22
 
 ```powershell
 Test-NetConnection 192.168.1.121 -Port 22
 ```
 
-Output:
+Output
 
 ```text
 TcpTestSucceeded : True
 ```
 
-### 13. Connected to Ubuntu via SSH
-
-From Windows PowerShell:
+### 13. Connected to the Ubuntu Server
 
 ```powershell
 ssh saeid@192.168.1.121
 ```
 
-Verified successful remote administration.
-
-### 14. Completed Server Preparation
-
-Verified that the Ubuntu Server was fully prepared for the upcoming Splunk Enterprise installation.
-
 ## Key Takeaways
 
-- Built a dedicated Ubuntu Server virtual machine for Splunk.
-- Configured Hyper-V networking and Secure Boot.
-- Learned the difference between `hostname -i` and `hostname -I`.
-- Configured and validated OpenSSH for secure remote administration.
-- Verified SSH service availability and TCP port 22 connectivity.
-- Prepared the server for the Splunk Enterprise installation.
+- Created a dedicated Ubuntu Server virtual machine for the Splunk lab.
+- Configured networking and OpenSSH for remote administration.
+- Verified SSH service status and TCP port 22 availability.
+- Confirmed remote SSH access from the Windows host.
+- Completed the Ubuntu Server preparation before installing Splunk Enterprise.
 
 ## Navigation
 
