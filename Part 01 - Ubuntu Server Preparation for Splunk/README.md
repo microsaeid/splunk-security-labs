@@ -201,4 +201,4 @@ N/A
 **Next Lab**
 
 **Part 02 - Splunk Enterprise Installation**
-➡️ Next Lab: [Part 14B — User Activity PowerShell Monitoring](../Part-14B-User-Activity-PowerShell-Monitoring)
+➡️ Next Lab: [Part 02 - Splunk Enterprise Installation](../Part 02 - Splunk Enterprise Installation)
