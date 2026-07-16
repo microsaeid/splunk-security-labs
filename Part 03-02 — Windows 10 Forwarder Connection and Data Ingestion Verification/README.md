@@ -145,12 +145,14 @@ Example Windows Event IDs:
 ```spl
 index=* host=DESKTOP-S8HR81A
 ```
+<img width="3840" height="1901" alt="Search-Splunk-10-0-2-07-15-2026_03_40_PM" src="https://github.com/user-attachments/assets/19fec4c1-02f4-48ca-b998-a9494a1b82b5" />
 
 ### Show Windows Security Events
 
 ```spl
 index=* host=DESKTOP-S8HR81A sourcetype=WinEventLog:Security
 ```
+<img width="3840" height="1907" alt="image" src="https://github.com/user-attachments/assets/326855ee-f3a4-4445-9114-952c5de71035" />
 
 ### Count Events by Host and Sourcetype
 
@@ -158,6 +160,7 @@ index=* host=DESKTOP-S8HR81A sourcetype=WinEventLog:Security
 index=*
 | stats count by host sourcetype
 ```
+<img width="3840" height="1983" alt="Search-Splunk-10-0-2-07-15-2026_03_41_PM (1)" src="https://github.com/user-attachments/assets/57331a0c-22a9-4af7-a57f-9184a22ac730" />
 
 ### Count Events by Sourcetype
 
@@ -165,6 +168,7 @@ index=*
 index=*
 | stats count by sourcetype
 ```
+<img width="3840" height="1916" alt="Search-Splunk-10-0-2-07-15-2026_03_42_PM" src="https://github.com/user-attachments/assets/531fa0ce-cba7-4833-910f-6cfbd48ef8c2" />
 
 ---
 
@@ -178,38 +182,6 @@ index=*
 - The Windows host was correctly identified.
 - The Windows Event Log source and sourcetype were correctly assigned.
 - Searches successfully returned Windows Event Log data.
-
----
-
-## Screenshots
-
-### 01 - Forwarder Connected
-
-![Forwarder Connected](screenshots/01-forwarder-connected.png)
-
----
-
-### 02 - Windows Events Arriving
-
-![Windows Events Arriving](screenshots/02-windows-events-arriving.png)
-
----
-
-### 03 - First Search Results
-
-![First Search Results](screenshots/03-first-search-results.png)
-
----
-
-### 04 - Host and Sourcetype
-
-![Host and Sourcetype](screenshots/04-host-and-sourcetype.png)
-
----
-
-### 05 - Event Statistics
-
-![Event Statistics](screenshots/05-events-statistics.png)
 
 ---
 
