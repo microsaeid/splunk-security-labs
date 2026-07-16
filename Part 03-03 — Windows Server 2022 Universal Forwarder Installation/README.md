@@ -122,4 +122,4 @@ The forwarder was configured for communication with the Splunk Enterprise server
 
 ⬅️ Previous Lab: [Part 03-02 — Windows 10 Forwarder Configuration and Verification](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2003-02%20%E2%80%94%20Windows%2010%20Forwarder%20Connection%20and%20Data%20Ingestion%20Verification)
 
-➡️ Next Lab: 
+➡️ Next Lab: [Part 03-04 — Windows Server 2022 Forwarder Connection and Data Ingestion Verification](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2003-04%20%E2%80%94%20Windows%20Server%202022%20Forwarder%20Connection%20and%20Data%20Ingestion%20Verification)
