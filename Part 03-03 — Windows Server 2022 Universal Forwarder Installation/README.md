@@ -120,6 +120,6 @@ The forwarder was configured for communication with the Splunk Enterprise server
 
 ---
 
-⬅️ Previous Lab: [](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2003-02%20%E2%80%94%20Windows%2010%20Forwarder%20Connection%20and%20Data%20Ingestion%20Verification)
+⬅️ Previous Lab: [Part 3-2](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2003-02%20%E2%80%94%20Windows%2010%20Forwarder%20Connection%20and%20Data%20Ingestion%20Verification)
 
 ➡️ Next Lab: 
