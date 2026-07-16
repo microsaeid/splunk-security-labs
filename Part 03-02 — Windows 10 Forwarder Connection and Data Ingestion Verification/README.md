@@ -187,6 +187,6 @@ index=*
 
 ## Navigation
 
-Previous: [Part 03-01 — Windows 10 Universal Forwarder Installation](../03-01-windows-10-universal-forwarder-installation/README.md)
+Previous: [Part 03-01 — Windows 10 Universal Forwarder Installation](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2003-01%20-%20Windows%2010%20Universal%20Forwarder%20Installation)
 
 Next: [Part 03-03 — Windows Server 2022 Universal Forwarder Installation](https://github.com/microsaeid/splunk-security-labs/tree/main/Part%2003-03%20%E2%80%94%20Windows%20Server%202022%20Universal%20Forwarder%20Installation)
