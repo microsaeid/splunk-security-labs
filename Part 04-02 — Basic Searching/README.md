@@ -24,7 +24,7 @@ The following search was used to display all available events within the selecte
 
 The search returned Windows events from both monitored systems.
 
-![Basic Search](screenshots/1-Basic-Search.png)
+![Basic Search](https://github.com/microsaeid/splunk-security-labs/blob/main/Part%2004-02%20%E2%80%94%20Basic%20Searching/1-Basic-Search.png)
 
 ## Search by Host
 
