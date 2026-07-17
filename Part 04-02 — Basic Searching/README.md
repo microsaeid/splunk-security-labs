@@ -36,7 +36,7 @@ host=DC01
 
 The results confirmed that events associated with the `DC01` host were available in Splunk.
 
-![Search by Host](screenshots/2-Search-by-Host.png)
+![Search by Host]([screenshots/2-Search-by-Host.png](https://github.com/microsaeid/splunk-security-labs/blob/main/Part%2004-02%20%E2%80%94%20Basic%20Searching/2-Search-by-Host.png))
 
 ## Search by Sourcetype
 
@@ -48,7 +48,7 @@ sourcetype="WinEventLog:Application"
 
 The results contained only events from the Windows Application log.
 
-![Search by Sourcetype](screenshots/3-Search-by-Sourcetype.png)
+![Search by Sourcetype](https://github.com/microsaeid/splunk-security-labs/blob/main/Part%2004-02%20%E2%80%94%20Basic%20Searching/3-Search-by-Sourcetype.png)
 
 ## Combined Search
 
@@ -60,7 +60,7 @@ host=DC01 source="WinEventLog:Security"
 
 The search returned only Windows Security events associated with the domain controller.
 
-![Combined Search](screenshots/4-Mix-Search.png)
+![Combined Search](https://github.com/microsaeid/splunk-security-labs/blob/main/Part%2004-02%20%E2%80%94%20Basic%20Searching/4-Mix-Search.png)
 
 ## Selected Fields
 
