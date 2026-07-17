@@ -15,7 +15,7 @@ This lab introduces the Splunk Search & Reporting interface and its main compone
 
 From the Splunk home page, opened the **Search & Reporting** application.
 
-![Search & Reporting App](images/01-search-reporting-app.png)
+![Search & Reporting App](https://github.com/microsaeid/splunk-security-labs/blob/main/Splunk%2004-01-Search%20Interface/Search%20Interface%201.png)
 
 ---
 
@@ -29,7 +29,7 @@ Reviewed the main interface, including:
 - Search Results
 - Timeline
 
-![Search Interface](images/02-search-interface.png)
+![Search Interface](https://github.com/microsaeid/splunk-security-labs/blob/main/Splunk%2004-01-Search%20Interface/Search%20Interface%202.png)
 
 ---
 
@@ -43,7 +43,7 @@ index=main
 
 Verified that indexed events were returned successfully.
 
-![First Search Results](images/03-first-search-results.png)
+![First Search Results](https://github.com/microsaeid/splunk-security-labs/blob/main/Splunk%2004-01-Search%20Interface/Search%20Interface%203.png)
 
 ## Result
 
