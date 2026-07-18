@@ -106,7 +106,7 @@ The `head` command was used to return only the first five events from the search
 
 The search returned five events from the beginning of the result set.
 
-![Head Command](screenshots/08-head-5-events(1).png)
+![Head Command](screenshots/08-head-5-events.png)
 
 ## Tail Command
 
